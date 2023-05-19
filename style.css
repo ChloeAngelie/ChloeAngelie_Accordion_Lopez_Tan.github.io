@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 150%;
+    font-family: 'Lucida Sans';
+    background: linear-gradient(to bottom right, rgb(185, 52, 52), rgb(79, 3, 109));
+  }
+  
+
+  
+header {
+	padding-top: 5rem;
+	padding-bottom: 2px;
+	text-align: center;
+}
+
+header .h1-large {
+	margin: 0;
+	font-weight: 700;
+    font-size: 4rem;
+	color: #ffffff;
+}
+
+
+.accordion {
+    width: 800px;
+    margin: 5rem auto;
+    color: black;
+    border-radius: 40px;
+    background-color: white;
+    padding: 45px 45px;
+  }
+
+
+.accordion .container {
+    position: relative;
+    margin: 10px 10px;
+  }
+  
+
+.accordion .panel {
+    position: relative;
+    padding: 10px 0;
+    font-size: 25px;
+    font: bolder;
+    color: black;
+    cursor: pointer;
+  }
+
+.accordion .panel::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+  }
+  
+
+.accordion .content {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 680px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+
+.accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid grey;
+  }
+
+
+.accordion .container.active .content {
+    height: 150px;
+  }
+  
+  
+.accordion .container.active .panel::before {
+    content: '-';
+    font-size: 30px;
+  }
